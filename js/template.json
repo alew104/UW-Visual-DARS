@@ -1,0 +1,13 @@
+{ 
+    "classes": {
+        "info344": { 
+        	"dept" : "info", 
+        	"num" : 344,
+        	"fullName" : "info344",
+        	"required" : true,
+        	"prereqs" : ["info343", "cse142"],
+        	"completed" : false,
+        } 
+        ""
+    }
+}
