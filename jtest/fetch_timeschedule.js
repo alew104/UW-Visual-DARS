@@ -2,7 +2,7 @@
 // Year:               XXXX (four digits)
 // Departments:        info, cse, art, hcde
 
-(function() {
+// (function() {
     window.onload = function() {
         fetch_ts('SUM', '2015', 'info');
     };
@@ -19,7 +19,8 @@
             } else
                 console.log("Request failed :\\\\\\");
         }
+        console.log(url_base + qtr + year + '/' + dept'.html');
         xmlhttp.open("GET", url_base + qtr + year + '/' + dept'.html', true);
         xmlhttp.send();
     }
-})();
+// })();
