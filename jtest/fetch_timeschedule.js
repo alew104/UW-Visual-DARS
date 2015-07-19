@@ -19,8 +19,8 @@
             } else
                 console.log("Request failed :\\\\\\");
         }
-        console.log(url_base + qtr + year + '/' + dept'.html');
-        xmlhttp.open("GET", url_base + qtr + year + '/' + dept'.html', true);
+        console.log(url_base + qtr + year + '/' + dept + '.html');
+        xmlhttp.open("GET", url_base + qtr + year + '/' + dept + '.html', true);
         xmlhttp.send();
     }
 // })();
