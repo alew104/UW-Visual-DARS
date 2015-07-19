@@ -1,6 +1,95 @@
 {
     "classes": {
-        "info344": {
+
+      "cse142": {
+        "dept" : "CSE",
+        "num" : "142",
+        "fullName" : "cse142",
+        "required" : true,
+        "prereqs" : null,
+        "completed" : false,
+        "preferredYear" : 1,
+        "classType" : "NW, I&S, VLPA, ENGCOMP"
+      },
+
+        "cse143": {
+        	"dept" : "CSE",
+        	"num" : "143",
+        	"fullName" : "cse143",
+        	"required" : true,
+        	"prereqs" : ["cse142"],
+        	"completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "cse373": {
+          "dept" : "CSE",
+          "num" : "373",
+          "fullName" : "cse373",
+          "required" : true,
+          "prereqs" : ["cse143"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "info200": {
+          "dept" : "INFO",
+          "num" : "200",
+          "fullName" : "info200",
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "stat311": {
+          "dept" : "STAT",
+          "num" : "311",
+          "fullName" : "stat311",
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "qmeth201": {
+          "dept" : "QMETH",
+          "num" : "201",
+          "fullName" : "qmeth201",
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP, note this class and stat 311 are interchangeable"
+        },
+
+        "engl131": {
+          "dept" : "ENGL",
+          "num" : "131",
+          "fullName" : "engl131",
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "cse143": {
+          "dept" : "cse",
+          "num" : "143",
+          "fullName" : "cse143",
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "info343": {
         	"dept" : "info",
         	"num" : 344,
         	"fullName" : "info344",
@@ -11,48 +100,4 @@
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         }
     }
-}
-
-// this is the return object of the course search api
-
-
-{
-    Current: {Href: "/student/v5/section.json?year=2014&quarter=summer&future_terms=0&curriculum_abbreviation=cse&course_number=498&reg_id=&search_by=Instructor&include_secondaries=&delete_flag=&page_size=10&page_start=1",
-
-    CourseNumber: "498",
-    CurriculumAbbreviation: "cse",
-    DeleteFlag: null,
-    FutureTerms: 0,
-    IncludeSecondaries: false,
-    PageSize: "10",
-    PageStart: "1",
-    Quarter: "summer",
-    RegID: null,
-    SearchBy: "Instructor",
-    Year: "2014"
-    },
-
-    Next: null,
-    PageSize: "10",
-    PageStart: "1",
-    Previous: null,
-    Sections: [
-        {
-            Href: "/student/v5/course/2014,summer,CSE,498/A.json",
-            CourseNumber: "498",
-            CurriculumAbbreviation: "CSE",
-            Quarter: "summer",
-            SectionID: "A",
-            Year: 2014
-        },
-        {
-            Href: "/student/v5/course/2014,summer,CSE,498/B.json",
-            CourseNumber: "498",
-            CurriculumAbbreviation: "CSE",
-            Quarter: "summer",
-            SectionID: "B",
-            Year: 2014
-        }
-    ],
-    TotalCount: 2
 }
