@@ -7,6 +7,10 @@
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 <script src="js/classes.json" type = "text/javascript"></script>
+  <script src="js/year1.json" type = "text/javascript"></script>
+  <script src="js/year2.json" type = "text/javascript"></script>
+  <script src="js/year3.json" type = "text/javascript"></script>
+  <script src="js/year4.json" type = "text/javascript"></script>
 <script src="js/controller.js"></script>
 <script src="php/current-user.php" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -31,7 +35,7 @@
 
           <div class="col-md-6 col-md-offset-3">
 
-            <div class = 'classIcon' ng-repeat = "class in data | filter: {preferredYear: 1}"> <!-- ng-repeat on classes in a year -->
+            <div class = 'classIcon' ng-repeat = "class in yearOne" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
               <p class = "classText">
                 {{class.dept}}
               </p>
@@ -41,6 +45,9 @@
               </p>
 
             </div>
+
+            <div>{{credits}}</div>
+            <div>{{classesTaken}}</div>
 
         </div>
 
