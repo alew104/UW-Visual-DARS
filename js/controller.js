@@ -17,8 +17,7 @@ myApp.filter('orderObjectBy', function() {
 
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
-    $scope.data = JSON.parse(classes);
-	$scope.data = JSON.parse(data);
+	$scope.data = data.classes;
 
     //$scope.netid = netid;
     $scope.credits = 0;
@@ -27,18 +26,18 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.electives = [];
 
     $scope.markCompleted = function (_class) {
-        $scope.data.classes[_class].completed = true;
+        $scope.data[_class].completed = true;
         $scope.classesTaken.push(_class);
-        if (!$scope.data.classes[_class].required) {
+        if (!$scope.data[_class].required) {
             $scope.electives.push(_class);
-            $scope.electivesCredits += $scope.data.classes[_class].credits;
+            $scope.electivesCredits += $scope.data[_class].credits;
         }
-        $scope.credits += $scope.data.classes[_class].credits;
+        $scope.credits += $scope.data[_class].credits;
     };
 
     $scope.checkPrereq = function (_class) {
         var result = true;
-        var prereqs = $scope.data.classes[_class].prereqs;
+        var prereqs = $scope.data[_class].prereqs;
         if (!prereqs) {
             for (var i = 0; i < prereqs.length; i++) {
                 if (result) {

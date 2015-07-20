@@ -53,7 +53,7 @@ data = {
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         },
 
-        // Year 1 classes
+
 
         "info101" : {
           "dept" : "INFO",
@@ -79,7 +79,7 @@ data = {
           "classType" : "I&S, DIV"
         },
 
-        // Year 2 classes
+
 
         "info200" : {
           "dept" : "INFO",
@@ -88,7 +88,7 @@ data = {
           "title" : "Intellectual Foundations of Informatics",
           "credits" : 5,
           "required" : true,
-          "prereqs" : null, //info 343 concurrently
+          "prereqs" : null,
           "completed" : false,
           "preferredYear" : 2,
           "classType" : "I&S"
@@ -101,7 +101,7 @@ data = {
           "title" : "Database Management Fundamentals I",
           "credits" : 5,
           "required" : false,
-          "prereqs" : null, //info 343 concurrently
+          "prereqs" : null,
           "completed" : false,
           "preferredYear" : 2,
           "classType" : null
@@ -114,13 +114,13 @@ data = {
           "title" : "Database Management Fundamentals II",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["info240"], //info 343 concurrently
+          "prereqs" : ["info240"],
           "completed" : false,
           "preferredYear" : 2,
           "classType" : null
         },
 
-        // Year 3 classes
+
 
         "info310" : {
           "dept" : "INFO",
@@ -129,7 +129,7 @@ data = {
           "title" : "Information Assurance and Cybersecurity",
           "credits" : 5,
           "required" : false,
-          "prereqs" : null, //info 343 concurrently
+          "prereqs" : null,
           "completed" : false,
           "preferredYear" : 3,
           "classType" : null
@@ -142,7 +142,7 @@ data = {
           "title" : "Enterprise Risk Management",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["cse142"], //info 343 concurrently
+          "prereqs" : ["cse142"],
           "completed" : false,
           "preferredYear" : 3,
           "classType" : null
@@ -155,7 +155,7 @@ data = {
           "title" : "Technical and Social Perspectives on Search",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["cse142"], //info 343 concurrently
+          "prereqs" : ["cse142"],
           "completed" : false,
           "preferredYear" : 3,
           "classType" : null,
@@ -221,7 +221,7 @@ data = {
           "title" : "Server-Side Web Development",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["cse142", "info343"], // figure out prereq structure
+          "prereqs" : ["cse142", "info343"],
           "completed" : false,
           "preferredYear" : 3,
           "classType" : "I&S",
@@ -261,7 +261,7 @@ data = {
           "title" : "Introduction to Data Science",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["cse142"], // figure out prereq structure
+          "prereqs" : ["cse142"],
           "completed" : false,
           "preferredYear" : 3,
           "classType" : "QSR"
@@ -293,7 +293,7 @@ data = {
           "classType" : ""
         },
 
-        // Year 4 classes
+
 
         "info415" : {
           "dept" : "INFO",
@@ -383,7 +383,7 @@ data = {
           "title" : "Value-Sensitive Design",
           "credits" : 5,
           "required" : false,
-          "prereqs" : [], // figure out prereq structure
+          "prereqs" : [],
           "completed" : false,
           "preferredYear" : 4,
           "classType" : ""
@@ -488,7 +488,7 @@ data = {
           "title" : "Research Methods in Informatics",
           "credits" : 5,
           "required" : true,
-          "prereqs" : [], // figure out prereq structure
+          "prereqs" : [],
           "completed" : false,
           "preferredYear" : 4,
           "classType" : ""
@@ -501,7 +501,7 @@ data = {
           "title" : "Interactive Information Visualization",
           "credits" : 5,
           "required" : false,
-          "prereqs" : ["cse143"], // figure out prereq structure
+          "prereqs" : ["cse143"],
           "completed" : false,
           "preferredYear" : 4,
           "classType" : "VLPA, QSR"
@@ -546,14 +546,14 @@ data = {
           "classType" : ""
         },
 
-        // Extra year 4 classes
+
 
         "info495" : {
           "dept" : "INFO",
           "num" : "495",
           "fullName" : "info495",
           "title" : "Internship in Informatics",
-          "credits" : "1-5", // string?
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
@@ -566,7 +566,7 @@ data = {
           "num" : "497",
           "fullName" : "info497",
           "title" : "Informatics Study Abroad",
-          "credits" : "1-8", // string?
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
@@ -579,7 +579,7 @@ data = {
           "num" : "498",
           "fullName" : "info498",
           "title" : "Special Topics in Informatics",
-          "credits" : "1-5", // string?
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
@@ -592,7 +592,7 @@ data = {
           "num" : "499",
           "fullName" : "info499",
           "title" : "Independent Study",
-          "credits" : "1-5", // string?
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
@@ -606,7 +606,7 @@ data = {
           "fullName" : "qmeth201",
           "title" : "Introduction to Statistical Methods",
           "credits": 4,
-          "required" : true, // or stat 311
+          "required" : true,
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
@@ -619,7 +619,7 @@ data = {
           "fullName" : "stat311",
           "title" : "Elements of Statistical Methods",
           "credits": 5,
-          "required" : true, // or qmeth201
+          "required" : true, 
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
