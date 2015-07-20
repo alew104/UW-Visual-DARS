@@ -1,22 +1,21 @@
 body{
-  font-family: 'Varela', sans-serif;
+  font-family: 'Karla', sans-serif;
+  background-color: #00FF94;
 }
 
 h1{
   text-align: center;
 }
+
 .classIcon{
-  margin-top: 5px;
-  height: 100px;
-  width: 100px;
-  background-color: #195f77;
-  border-radius: 5px;
+  width: 150px;
+  height: 200px;
   position: relative;
-  padding-top: 5px;
   display: inline-block;
+  background-image: url(../img/150x200.svg);
 }
 
-.classText{
+.classDept{
   padding-top: 13px;
   color: white;
   font-size: 20px;
@@ -27,6 +26,14 @@ h1{
   color: white;
   font-size: 20px;
   text-align: center;
+}
+
+.classTitle {
+
+}
+
+.classCredits {
+
 }
 
 .yearRow{
