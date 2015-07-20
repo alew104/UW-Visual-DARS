@@ -1,3 +1,6 @@
+var myApp = angular.module('myApp', []);
+
+
 myApp.filter('orderObjectBy', function() {
     return function(items, field, reverse) {
         var filtered = [];
@@ -14,7 +17,7 @@ myApp.filter('orderObjectBy', function() {
 
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
-	$scope.data = JSON.parse(classes);
+	$scope.data = JSON.parse(data);
 
     //$scope.netid = netid;
 	$scope.credits = 0;
