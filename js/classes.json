@@ -441,7 +441,7 @@ data = {
           "num" : "463",
           "fullName" : "info463",
           "title" : "Input and Interaction",
-          "credit" : 5,
+          "credits" : 5,
           "required" : false,
           "prereqs" : ["info360"],
           "completed" : false,
