@@ -1,11 +1,19 @@
 body{
   font-family: 'Varela', sans-serif;
 }
+
+h1{
+  text-align: center;
+}
 .classIcon{
+  margin-top: 5px;
   height: 100px;
   width: 100px;
   background-color: #195f77;
   border-radius: 5px;
+  position: relative;
+  padding-top: 5px;
+  display: inline-block;
 }
 
 .classText{
@@ -21,19 +29,5 @@ body{
   text-align: center;
 }
 
-/*Don't think we can filter classes by this type */
-/*.VLPA{
-
-}
-
-.NW{
-
-}
-
-.IS{
-
-}*/
-
-.majorReq{
-
+.yearRow{
 }

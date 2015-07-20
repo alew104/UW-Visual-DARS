@@ -40,21 +40,297 @@
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         },
 
-        "info200" : {
+        // Year 1 classes
+
+        "info101" : {
           "dept" : "INFO",
-          "num" : "200",
-          "fullName" : "info200",
-          "title" : "",
+          "num" : "101",
+          "fullName" : "info101",
+          "title" : "Social Networking Technologies",
           "required" : true,
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
-          "classType" : "NW, I&S, VLPA, ENGCOMP"
+          "classType" : "I&S, NW"
         },
 
-        // Year 4 classes: required
+        "info102" : {
+          "dept" : "INFO",
+          "num" : "102",
+          "fullName" : "info102",
+          "title" : "Gender and Information Technology",
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "I&S, DIV"
+        },
 
-        
+        // Year 2 classes
+
+        "info200" : {
+          "dept" : "info",
+          "num" : "200",
+          "fullName" : "info200",
+          "title" : "Intellectual Foundations of Informatics",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null, //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 2,
+          "classType" : "I&S"
+        },
+
+        "info240" : {
+          "dept" : "info",
+          "num" : "240",
+          "fullName" : "info240",
+          "title" : "Database Management Fundamentals I",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null, //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 2,
+          "classType" : null
+        },
+
+        "info245" : {
+          "dept" : "info",
+          "num" : "245",
+          "fullName" : "info245",
+          "title" : "Database Management Fundamentals II",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["info240"], //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 2,
+          "classType" : null
+        },
+
+        // Year 3 classes
+
+        "info310" : {
+          "dept" : "info",
+          "num" : "310",
+          "fullName" : "info310",
+          "title" : "Information Assurance and Cybersecurity",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null, //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info312" : {
+          "dept" : "info",
+          "num" : "312",
+          "fullName" : "info312",
+          "title" : "Enterprise Risk Management",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"], //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info320" : {
+          "dept" : "info",
+          "num" : "320",
+          "fullName" : "info320",
+          "title" : "Technical and Social Perspectives on Search",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"], //info 343 concurrently
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info330" : {
+          "dept" : "info",
+          "num" : "330",
+          "fullName" : "info330",
+          "title" : "Introduction to Relational Database Management Systems",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["info360"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info340" : {
+          "dept" : "info",
+          "num" : "340",
+          "fullName" : "info340",
+          "title" : "Introduction to Relational Database Management Systems",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info341" : {
+          "dept" : "info",
+          "num" : "341",
+          "fullName" : "info341",
+          "title" : "Computer Networks and Distributed Applications",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info343" : {
+          "dept" : "info",
+          "num" : "343",
+          "fullName" : "info343",
+          "title" : "Client-Side Web Development",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info344" : {
+          "dept" : "INFO",
+          "num" : "344",
+          "fullName" : "info344",
+          "title" : "Server-Side Web Development",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142", "info343"], // figure out prereq structure
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        },
+
+        "info360" : {
+          "dept" : "INFO",
+          "num" : "360",
+          "fullName" : "info360",
+          "title" : "Design Thinking",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        },
+
+        "info362" : {
+          "dept" : "INFO",
+          "num" : "362",
+          "fullName" : "info362",
+          "title" : "Visual Information Design",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "VLPA"
+        },
+
+        "info370" : {
+          "dept" : "INFO",
+          "num" : "370",
+          "fullName" : "info370",
+          "title" : "Introduction to Data Science",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"], // figure out prereq structure
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "QSR"
+        },
+
+        "info380" : {
+          "dept" : "INFO",
+          "num" : "380",
+          "fullName" : "info380",
+          "title" : "Information Systems Analysis and Design",
+          "credits" : 4,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : ""
+        },
+
+        "info386" : {
+          "dept" : "INFO",
+          "num" : "386",
+          "fullName" : "info386",
+          "title" : "Professionalism in Informatics",
+          "credits" : 4,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : ""
+        },
+
+        // Year 4 classes
+
+        "info415" : {
+          "dept" : "INFO",
+          "num" : "415",
+          "fullName" : "info415",
+          "title" : "Emerging Topics in Information Assurance and Cybersecurity",
+          "credits" : "1-5",
+          "required" : false,
+          "prereqs" : ["info310"],
+          "completed" : false,
+          "preferredYear" : 4,
+          "classType" : ""
+        },
+
+        "info424" : {
+          "dept" : "INFO",
+          "num" : "424",
+          "fullName" : "info424",
+          "title" : "Information Visualization and Aesthetics",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 4,
+          "classType" : "VLPA"
+        },
+
+        "info430" : {
+          "dept" : "INFO",
+          "num" : "430",
+          "fullName" : "info430",
+          "title" : "Knowledge Organization and Representation",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["info200", "info330"],
+          "completed" : false,
+          "preferredYear" : 4,
+          "classType" : ""
+        },
+
+        "info431" : {
+          "dept" : "INFO",
+          "num" : "431",
+          "fullName" : "info431",
+          "title" : "Metadata Design",
+          "credits" : 3,
+          "required" : false,
+          "prereqs" : ["info330", "info340"],
+          "completed" : false,
+          "preferredYear" : 4,
+          "classType" : ""
+        },
 
         "info432" : {
           "dept" : "INFO",
@@ -63,10 +339,10 @@
           "title" : "Ontology Design",
           "credits" : 3,
           "required" : false,
-          "prereqs" : ["info431"], // figure out prereq structure
+          "prereqs" : ["info431"],
           "completed" : false,
           "preferredYear" : 4,
-          "classType" : "I&S"
+          "classType" : ""
         },
 
         "info433" : {
@@ -127,7 +403,7 @@
           "fullName" : "info463",
           "title" : "Information Ethics and Policy",
           "credits" : 5,
-          "required" : false,
+          "required" : true,
           "prereqs" : ["info360"],
           "completed" : false,
           "preferredYear" : 3,
@@ -225,7 +501,7 @@
           "classType" : ""
         },
 
-        "info490" : { // Project Capstone I: required
+        "info490" : {
           "dept" : "INFO",
           "num" : "490",
           "fullName" : "info490",
@@ -238,7 +514,7 @@
           "classType" : ""
         },
 
-        "info491" : { // Project Capstone II: required
+        "info491" : {
           "dept" : "INFO",
           "num" : "491",
           "fullName" : "info491",
@@ -348,17 +624,5 @@
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         },
 
-        "info343" : {
-        	"dept" : "info",
-        	"num" : 344,
-        	"fullName" : "info344",
-          "title" : "Client-Side Web Development",
-          "credits" : 5,
-        	"required" : true,
-        	"prereqs" : ["info343", "cse142"],
-        	"completed" : false,
-          "preferredYear" : 2,
-          "classType" : "NW, I&S, VLPA, ENGCOMP"
-        }
     }
 }
