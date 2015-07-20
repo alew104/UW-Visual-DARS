@@ -52,9 +52,92 @@
         </div>
 
       </div>
-    </div> <!-- end of yearRow -->
+    </div>
+
+  </div> <!-- end of yearRow -->
+
+  <div class="row">  <!-- ng-repeat on years -->
+    <div class="col-sm-12">
+      <h1>Year 2</h1>
+      <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+          <div class = 'classIcon' ng-repeat = "class in yearTwo" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+            <p class = "classText">
+              {{class.dept}}
+            </p>
+
+            <p class = "classNum">
+              {{class.num}}
+            </p>
+
+          </div>
+
+          <div>{{credits}}</div>
+          <div>{{classesTaken}}</div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- end of yearRow -->
+<div class="row">  <!-- ng-repeat on years -->
+  <div class="col-sm-12">
+    <h1>Year 3</h1>
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class = 'classIcon' ng-repeat = "class in yearThree" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+          <p class = "classText">
+            {{class.dept}}
+          </p>
+
+          <p class = "classNum">
+            {{class.num}}
+          </p>
+
+        </div>
+
+        <div>{{credits}}</div>
+        <div>{{classesTaken}}</div>
+
+    </div>
 
   </div>
+</div>
+
+</div> <!-- end of yearRow -->
+
+<div class="row">  <!-- ng-repeat on years -->
+  <div class="col-sm-12">
+    <h1>Year 4</h1>
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class = 'classIcon' ng-repeat = "class in yearFour" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+          <p class = "classText">
+            {{class.dept}}
+          </p>
+
+          <p class = "classNum">
+            {{class.num}}
+          </p>
+
+        </div>
+
+        <div>{{credits}}</div>
+        <div>{{classesTaken}}</div>
+
+    </div>
+
+  </div>
+</div>
+
+</div> <!-- end of yearRow -->
 
 </div>
 </div>

@@ -6,7 +6,7 @@ year4 = {
           "num" : "415",
           "fullName" : "info415",
           "title" : "Emerging Topics in Information Assurance and Cybersecurity",
-          "credits" : "1-5",
+          "credits" : 5,
           "required" : false,
           "prereqs" : ["info310"],
           "completed" : false,
