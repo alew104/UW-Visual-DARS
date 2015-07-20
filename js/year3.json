@@ -188,7 +188,7 @@ year3 = {
         "info450" : {
           "dept" : "INFO",
           "num" : "450",
-          "fullName" : "info463",
+          "fullName" : "info450",
           "title" : "Information Ethics and Policy",
           "credits" : 5,
           "required" : true,
