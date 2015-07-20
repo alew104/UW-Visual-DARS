@@ -15,6 +15,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.electives = [];
 
     $scope.markCompleted = function (_class) {
+			// we need to run the checkPreReq function here
         if(!$scope.data[_class].completed) {
             $scope.data[_class].completed = true;
             $scope.classesTaken.push(_class);
