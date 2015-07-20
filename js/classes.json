@@ -58,6 +58,7 @@ data = {
           "num" : "101",
           "fullName" : "info101",
           "title" : "Social Networking Technologies",
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
