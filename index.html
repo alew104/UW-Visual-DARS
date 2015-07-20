@@ -7,6 +7,8 @@
 <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 <script src="js/uwdars.js"></script>
 <script src="php/current-user.php" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/index.css">
 <script>
     console.log(currentUser);
@@ -15,6 +17,22 @@
 </head>
 
 <body>
+  <div ng-app = "myApp" ng-controller = "myCtrl">
+    <div class = "container">
+    <div class = "row">
+      <div class = "col-md-4, yearCol"
+      <div class = "col-md-1, classIcon" ng-repeat = "" ng-click = "flagCompleted()">
+        <p class = "classText">
+          {{dept}}
+        </p>
+        <p class = "classNum">
+          {{num}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- initial code snippet? please review -->
 
   <!-- <div ng-app="myApp" ng-controller="myCtrl">
