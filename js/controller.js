@@ -1,23 +1,12 @@
 var myApp = angular.module('myApp', []);
 
-
-myApp.filter('orderObjectBy', function() {
-    return function(items, field, reverse) {
-        var filtered = [];
-        angular.forEach(items, function(item) {
-            filtered.push(item);
-        });
-        filtered.sort(function (a, b) {
-            return (a[field] > b[field] ? 1 : -1);
-        });
-        if(reverse) filtered.reverse();
-            return filtered;
-    };
-});
-
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
 	$scope.data = data.classes;
+    $scope.yearOne = year1.classes;
+    $scope.yearTwo = year2.classes;
+    $scope.yearThree = year3.classes;
+    $scope.yearFour = year4.classes;
 
     //$scope.netid = netid;
     $scope.credits = 0;
@@ -26,13 +15,15 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.electives = [];
 
     $scope.markCompleted = function (_class) {
-        $scope.data[_class].completed = true;
-        $scope.classesTaken.push(_class);
-        if (!$scope.data[_class].required) {
-            $scope.electives.push(_class);
-            $scope.electivesCredits += $scope.data[_class].credits;
+        if(!$scope.data[_class].completed) {
+            $scope.data[_class].completed = true;
+            $scope.classesTaken.push(_class);
+            if (!$scope.data[_class].required) {
+                $scope.electives.push(_class);
+                $scope.electivesCredits += $scope.data[_class].credits;
+            }
+            $scope.credits += $scope.data[_class].credits;
         }
-        $scope.credits += $scope.data[_class].credits;
     };
 
     $scope.checkPrereq = function (_class) {
