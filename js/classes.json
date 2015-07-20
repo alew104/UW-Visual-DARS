@@ -53,8 +53,6 @@ data = {
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         },
 
-
-
         "info101" : {
           "dept" : "INFO",
           "num" : "101",
@@ -78,8 +76,6 @@ data = {
           "preferredYear" : 1,
           "classType" : "I&S, DIV"
         },
-
-
 
         "info200" : {
           "dept" : "INFO",
@@ -119,8 +115,6 @@ data = {
           "preferredYear" : 2,
           "classType" : null
         },
-
-
 
         "info310" : {
           "dept" : "INFO",
@@ -292,8 +286,6 @@ data = {
           "preferredYear" : 3,
           "classType" : ""
         },
-
-
 
         "info415" : {
           "dept" : "INFO",
@@ -545,8 +537,6 @@ data = {
           "preferredYear" : 4,
           "classType" : ""
         },
-
-
 
         "info495" : {
           "dept" : "INFO",

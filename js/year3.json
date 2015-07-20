@@ -1,0 +1,201 @@
+year3 = {
+    "classes": {
+
+        "cse373" : {
+          "dept" : "CSE",
+          "num" : "373",
+          "fullName" : "cse373",
+          "title" : "Data Structures and Algorithms",
+          "credits": 3,
+          "required" : true,
+          "prereqs" : ["cse143"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "info310" : {
+          "dept" : "INFO",
+          "num" : "310",
+          "fullName" : "info310",
+          "title" : "Information Assurance and Cybersecurity",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info312" : {
+          "dept" : "INFO",
+          "num" : "312",
+          "fullName" : "info312",
+          "title" : "Enterprise Risk Management",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info320" : {
+          "dept" : "INFO",
+          "num" : "320",
+          "fullName" : "info320",
+          "title" : "Technical and Social Perspectives on Search",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null,
+          "degreeOption" : "IA"
+        },
+
+        "info330" : {
+          "dept" : "INFO",
+          "num" : "330",
+          "fullName" : "info330",
+          "title" : "Introduction to Relational Database Management Systems",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["info360"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info340" : {
+          "dept" : "INFO",
+          "num" : "340",
+          "fullName" : "info340",
+          "title" : "Introduction to Relational Database Management Systems",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info341" : {
+          "dept" : "INFO",
+          "num" : "341",
+          "fullName" : "info341",
+          "title" : "Computer Networks and Distributed Applications",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info343" : {
+          "dept" : "INFO",
+          "num" : "343",
+          "fullName" : "info343",
+          "title" : "Client-Side Web Development",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info344" : {
+          "dept" : "INFO",
+          "num" : "344",
+          "fullName" : "info344",
+          "title" : "Server-Side Web Development",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142", "info343"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S",
+          "degreeOption" : "IA"
+        },
+
+        "info360" : {
+          "dept" : "INFO",
+          "num" : "360",
+          "fullName" : "info360",
+          "title" : "Design Thinking",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        },
+
+        "info362" : {
+          "dept" : "INFO",
+          "num" : "362",
+          "fullName" : "info362",
+          "title" : "Visual Information Design",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "VLPA"
+        },
+
+        "info370" : {
+          "dept" : "INFO",
+          "num" : "370",
+          "fullName" : "info370",
+          "title" : "Introduction to Data Science",
+          "credits" : 5,
+          "required" : false,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "QSR"
+        },
+
+        "info380" : {
+          "dept" : "INFO",
+          "num" : "380",
+          "fullName" : "info380",
+          "title" : "Information Systems Analysis and Design",
+          "credits" : 4,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : ""
+        },
+
+        "info386" : {
+          "dept" : "INFO",
+          "num" : "386",
+          "fullName" : "info386",
+          "title" : "Professionalism in Informatics",
+          "credits" : 4,
+          "required" : false,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : ""
+        },
+
+        "info450" : {
+          "dept" : "INFO",
+          "num" : "450",
+          "fullName" : "info463",
+          "title" : "Information Ethics and Policy",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["info360"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        }
+    }
+}
