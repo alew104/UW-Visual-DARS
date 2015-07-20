@@ -7,33 +7,65 @@ h1{
   text-align: center;
 }
 
+hr {
+  display: block;
+  border-top: 1px solid #000000;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
 .classIcon{
-  width: 150px;
-  height: 200px;
+  color: #000000;
+  width: 125px;
+  height: 150px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
   position: relative;
+  vertical-align: top;
   display: inline-block;
-  background-image: url(../img/150x200.svg);
+  background-image: url(../img/125x150.svg);
+  background-repeat: no-repeat;
 }
 
 .classDept{
-  padding-top: 13px;
-  color: white;
-  font-size: 20px;
-  text-align: center;
+  font-size: 10px;
+  line-height: 8px;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: left;
 }
 
 .classNum{
-  color: white;
-  font-size: 20px;
-  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 30px;
+  line-height: 10px;
+  padding-left: 19px;
+  text-align: left;
 }
 
 .classTitle {
-
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 20px;
+  padding-right: 10px;
+  text-align: left;
 }
 
 .classCredits {
-
+  font-size: 10px;
+  line-height: 8px;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: right;
+  position: absolute;
+  top: 110px;
+  right: 10px;
 }
 
 .yearRow{
