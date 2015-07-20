@@ -1,18 +1,18 @@
 {
     "classes": {
 
-      "cse142" : {
-        "dept" : "CSE",
-        "num" : "142",
-        "fullName" : "cse142",
-        "title" : "Computer Programming I",
-        "credits": 5,
-        "required" : true,
-        "prereqs" : null,
-        "completed" : false,
-        "preferredYear" : 1,
-        "classType" : "NW, I&S, VLPA, ENGCOMP"
-      },
+        "cse142" : {
+          "dept" : "CSE",
+          "num" : "142",
+          "fullName" : "cse142",
+          "title" : "Computer Programming I",
+          "credits": 5,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
 
         "cse143" : {
         	"dept" : "CSE",
@@ -40,6 +40,19 @@
           "classType" : "NW, I&S, VLPA, ENGCOMP"
         },
 
+        "engl131" : {
+          "dept" : "ENGL",
+          "num" : "131",
+          "fullName" : "engl131",
+          "title" : "Composition: Exposition",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
         // Year 1 classes
 
         "info101" : {
@@ -47,7 +60,7 @@
           "num" : "101",
           "fullName" : "info101",
           "title" : "Social Networking Technologies",
-          "required" : true,
+          "required" : false,
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
@@ -59,7 +72,7 @@
           "num" : "102",
           "fullName" : "info102",
           "title" : "Gender and Information Technology",
-          "required" : true,
+          "required" : false,
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
@@ -74,7 +87,7 @@
           "fullName" : "info200",
           "title" : "Intellectual Foundations of Informatics",
           "credits" : 5,
-          "required" : false,
+          "required" : true,
           "prereqs" : null, //info 343 concurrently
           "completed" : false,
           "preferredYear" : 2,
@@ -145,7 +158,8 @@
           "prereqs" : ["cse142"], //info 343 concurrently
           "completed" : false,
           "preferredYear" : 3,
-          "classType" : null
+          "classType" : null,
+          "degreeOption" : "IA"
         },
 
         "info330" : {
@@ -210,7 +224,8 @@
           "prereqs" : ["cse142", "info343"], // figure out prereq structure
           "completed" : false,
           "preferredYear" : 3,
-          "classType" : "I&S"
+          "classType" : "I&S",
+          "degreeOption" : "IA"
         },
 
         "info360" : {
@@ -329,7 +344,8 @@
           "prereqs" : ["info330", "info340"],
           "completed" : false,
           "preferredYear" : 4,
-          "classType" : ""
+          "classType" : "",
+          "degreeOption" : "IA"
         },
 
         "info432" : {
@@ -342,7 +358,8 @@
           "prereqs" : ["info431"],
           "completed" : false,
           "preferredYear" : 4,
-          "classType" : ""
+          "classType" : "",
+          "degreeOption" : "IA"
         },
 
         "info433" : {
@@ -355,7 +372,8 @@
           "prereqs" : null, 
           "completed" : false,
           "preferredYear" : 4,
-          "classType" : "I&S"
+          "classType" : "I&S",
+          "degreeOption" : "IA"
         },
 
         "info444" : {
@@ -381,7 +399,8 @@
           "prereqs" : ["info340"],
           "completed" : false,
           "preferredYear" : 4,
-          "classType" : ""
+          "classType" : "",
+          "degreeOption" : "IA"
         },
 
         "info447" : {
@@ -581,9 +600,18 @@
           "classType" : ""
         },
 
-
-
-
+        "qmeth201" : {
+          "dept" : "QMETH",
+          "num" : "201",
+          "fullName" : "qmeth201",
+          "title" : "Introduction to Statistical Methods",
+          "credits": 4,
+          "required" : true, // or stat 311
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 1,
+          "classType" : "NW, I&S, VLPA, ENGCOMP, note this class and stat 311 are interchangeable"
+        },
 
         "stat311" : {
           "dept" : "STAT",
@@ -591,38 +619,11 @@
           "fullName" : "stat311",
           "title" : "Elements of Statistical Methods",
           "credits": 5,
-          "required" : true,
+          "required" : true, // or qmeth201
           "prereqs" : null,
           "completed" : false,
           "preferredYear" : 1,
           "classType" : "NW, I&S, VLPA, ENGCOMP"
-        },
-
-        "qmeth201" : {
-          "dept" : "QMETH",
-          "num" : "201",
-          "fullName" : "qmeth201",
-          "title" : "Introduction to Statistical Methods",
-          "credits": 4,
-          "required" : true,
-          "prereqs" : null,
-          "completed" : false,
-          "preferredYear" : 1,
-          "classType" : "NW, I&S, VLPA, ENGCOMP, note this class and stat 311 are interchangeable"
-        },
-
-        "engl131" : {
-          "dept" : "ENGL",
-          "num" : "131",
-          "fullName" : "engl131",
-          "title" : "Composition: Exposition",
-          "credits" : 5,
-          "required" : true,
-          "prereqs" : null,
-          "completed" : false,
-          "preferredYear" : 1,
-          "classType" : "NW, I&S, VLPA, ENGCOMP"
-        },
-
+        }
     }
 }
