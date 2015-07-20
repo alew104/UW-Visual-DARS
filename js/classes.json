@@ -71,6 +71,7 @@ data = {
           "num" : "102",
           "fullName" : "info102",
           "title" : "Gender and Information Technology",
+          "credits" : 5,
           "required" : false,
           "prereqs" : null,
           "completed" : false,
