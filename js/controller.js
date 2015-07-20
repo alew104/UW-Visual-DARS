@@ -1,6 +1,24 @@
+var myApp = angular.module('myApp', []);
+
+
+myApp.filter('orderObjectBy', function() {
+    return function(items, field, reverse) {
+        var filtered = [];
+        angular.forEach(items, function(item) {
+            filtered.push(item);
+        });
+        filtered.sort(function (a, b) {
+            return (a[field] > b[field] ? 1 : -1);
+        });
+        if(reverse) filtered.reverse();
+            return filtered;
+    };
+});
+
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
     $scope.data = JSON.parse(classes);
+	$scope.data = JSON.parse(data);
 
     //$scope.netid = netid;
     $scope.credits = 0;
@@ -39,7 +57,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         return $scope.electivesCredits + '/75 credits';
     };
 
-    $scope.checkCredit = function () {
-        return $scope.credits + '/180 credits';
-    };
+	$scope.checkCredit = function () {
+		return $scope.credits + '/180 credits';
+	};
 });

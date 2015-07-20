@@ -1,4 +1,4 @@
-{
+data = {
     "classes": {
 
         "cse142" : {
@@ -369,7 +369,7 @@
           "title" : "Content Strategy in Information Architecture",
           "credits" : 4,
           "required" : false,
-          "prereqs" : null, 
+          "prereqs" : null,
           "completed" : false,
           "preferredYear" : 4,
           "classType" : "I&S",
@@ -514,7 +514,7 @@
           "title" : "Project Management in Informatics",
           "credits" : 4,
           "required" : true,
-          "prereqs" : null, 
+          "prereqs" : null,
           "completed" : false,
           "preferredYear" : 4,
           "classType" : ""
