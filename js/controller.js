@@ -2,7 +2,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
 
 	$scope.data = JSON.parse(classes);
 
-// $scope.netid = netid;
+    //$scope.netid = netid;
 	$scope.credits = 0;
     $scope.electivesCredits = 0;
 	$scope.classesTaken = [];
@@ -20,7 +20,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
 
 	$scope.checkPrereq = function (_class) {
 		var result = true;
-		var prereqs = data.classes[_class].prereqs;
+		var prereqs = $scope.data.classes[_class].prereqs;
 		if (!prereqs) {
 			for (var i = 0; i < prereqs.length; i++) {
 				if (result) {
