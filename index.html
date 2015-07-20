@@ -17,43 +17,56 @@
 </head>
 
 <body>
-  <div ng-app = "myApp" ng-controller = "myCtrl">
-    <div class = "container">
-    <div class = "row">
-      <div class = "col-md-4, yearCol"
-      <div class = "col-md-1, classIcon" ng-repeat = "" ng-click = "flagCompleted()">
-        <p class = "classText">
-          {{dept}}
-        </p>
-        <p class = "classNum">
-          {{num}}
-        </p>
+
+<div ng-app = "myApp" ng-controller = "myCtrl">
+
+  <div class = "container-fluid">
+    <div class="row">  <!-- ng-repeat on years -->
+      <div class="col-sm-12">
+        Year 1 <!-- {{year}} -->
+        <div class="row">
+          <div class="col-md-6, col-md-offset-3, classIcon"> <!-- ng-repeat on classes in a year -->
+
+            <p class = "classText">
+              INFO <!-- {{dept}} -->
+            </p>
+
+            <p class = "classNum">
+              200 <!-- {{classNum}} -->
+            </p>
+
+          </div>
+
+          <div class="col-xs-1 col-sm-1, classIcon"> <!-- ng-repeat on classes in a year -->
+
+            <p class = "classText">
+              CSE <!-- {{dept}} -->
+            </p>
+
+            <p class = "classNum">
+              142 <!-- {{classNum}} -->
+            </p>
+
+          </div>
+
+          <div class="col-xs-1 col-sm-1, classIcon"> <!-- ng-repeat on classes in a year -->
+
+            <p class = "classText">
+              ENGL <!-- {{dept}} -->
+            </p>
+
+            <p class = "classNum">
+              131 <!-- {{classNum}} -->
+            </p>
+
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
+
 </div>
-
-  <!-- initial code snippet? please review -->
-
-  <!-- <div ng-app="myApp" ng-controller="myCtrl">
-    <div ng-repeat = "track in exposeTracks | orderObjectBy:'trackCount':true | limitTo: 100" class = "classIcon" ng-class = "placeholder" ng-click = "flagCompleted()">
-      <p class = 'classText'>
-        {{dept}}
-      </p>
-      <p class = 'classNum'>
-        {{num}}
-      </p>
-    </div>
-  </div> -->
-
-    <div class = 'classIcon'>
-      <p class = 'classText'>
-        ART
-      </p>
-      <p class = 'classNum'>
-        200
-      </p>
-    </div>
 
 </body>
 
