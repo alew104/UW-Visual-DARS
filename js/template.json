@@ -82,7 +82,7 @@
         // Year 2 classes
 
         "info200" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "200",
           "fullName" : "info200",
           "title" : "Intellectual Foundations of Informatics",
@@ -95,7 +95,7 @@
         },
 
         "info240" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "240",
           "fullName" : "info240",
           "title" : "Database Management Fundamentals I",
@@ -108,7 +108,7 @@
         },
 
         "info245" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "245",
           "fullName" : "info245",
           "title" : "Database Management Fundamentals II",
@@ -123,7 +123,7 @@
         // Year 3 classes
 
         "info310" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "310",
           "fullName" : "info310",
           "title" : "Information Assurance and Cybersecurity",
@@ -136,7 +136,7 @@
         },
 
         "info312" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "312",
           "fullName" : "info312",
           "title" : "Enterprise Risk Management",
@@ -149,7 +149,7 @@
         },
 
         "info320" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "320",
           "fullName" : "info320",
           "title" : "Technical and Social Perspectives on Search",
@@ -163,7 +163,7 @@
         },
 
         "info330" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "330",
           "fullName" : "info330",
           "title" : "Introduction to Relational Database Management Systems",
@@ -176,7 +176,7 @@
         },
 
         "info340" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "340",
           "fullName" : "info340",
           "title" : "Introduction to Relational Database Management Systems",
@@ -189,7 +189,7 @@
         },
 
         "info341" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "341",
           "fullName" : "info341",
           "title" : "Computer Networks and Distributed Applications",
@@ -202,7 +202,7 @@
         },
 
         "info343" : {
-          "dept" : "info",
+          "dept" : "INFO",
           "num" : "343",
           "fullName" : "info343",
           "title" : "Client-Side Web Development",
