@@ -12,47 +12,7 @@ year3 = {
           "completed" : false,
           "preferredYear" : 3,
           "classType" : "NW, I&S, VLPA, ENGCOMP"
-        },
-
-        "info310" : {
-          "dept" : "INFO",
-          "num" : "310",
-          "fullName" : "info310",
-          "title" : "Information Assurance and Cybersecurity",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : null,
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : null
-        },
-
-        "info312" : {
-          "dept" : "INFO",
-          "num" : "312",
-          "fullName" : "info312",
-          "title" : "Enterprise Risk Management",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : ["cse142"],
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : null
-        },
-
-        "info320" : {
-          "dept" : "INFO",
-          "num" : "320",
-          "fullName" : "info320",
-          "title" : "Technical and Social Perspectives on Search",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : ["cse142"],
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : null,
-          "degreeOption" : "IA"
-        },
+        },    
 
         "info330" : {
           "dept" : "INFO",
@@ -80,19 +40,6 @@ year3 = {
           "classType" : "NW"
         },
 
-        "info341" : {
-          "dept" : "INFO",
-          "num" : "341",
-          "fullName" : "info341",
-          "title" : "Computer Networks and Distributed Applications",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : ["cse142"],
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : "NW"
-        },
-
         "info343" : {
           "dept" : "INFO",
           "num" : "343",
@@ -106,19 +53,6 @@ year3 = {
           "classType" : "NW"
         },
 
-        "info344" : {
-          "dept" : "INFO",
-          "num" : "344",
-          "fullName" : "info344",
-          "title" : "Server-Side Web Development",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : ["cse142", "info343"],
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : "I&S",
-          "degreeOption" : "IA"
-        },
 
         "info360" : {
           "dept" : "INFO",
@@ -133,31 +67,7 @@ year3 = {
           "classType" : "I&S"
         },
 
-        "info362" : {
-          "dept" : "INFO",
-          "num" : "362",
-          "fullName" : "info362",
-          "title" : "Visual Information Design",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : null,
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : "VLPA"
-        },
 
-        "info370" : {
-          "dept" : "INFO",
-          "num" : "370",
-          "fullName" : "info370",
-          "title" : "Introduction to Data Science",
-          "credits" : 5,
-          "required" : false,
-          "prereqs" : ["cse142"],
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : "QSR"
-        },
 
         "info380" : {
           "dept" : "INFO",
@@ -172,18 +82,7 @@ year3 = {
           "classType" : ""
         },
 
-        "info386" : {
-          "dept" : "INFO",
-          "num" : "386",
-          "fullName" : "info386",
-          "title" : "Professionalism in Informatics",
-          "credits" : 4,
-          "required" : false,
-          "prereqs" : null,
-          "completed" : false,
-          "preferredYear" : 3,
-          "classType" : ""
-        },
+
 
         "info450" : {
           "dept" : "INFO",
