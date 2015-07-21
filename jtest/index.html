@@ -1,0 +1,74 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing area</title>
+        <script src="https://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>
+        <script src="fetch_google.js" type="text/javascript"></script>
+        <script src="fetch_timeschedule.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="type"></div>
+        <div id="text"></div>
+        <div id="xml"></div>
+    </body>
+</html>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.parseHTML demo</title>
+  <script src="jquery-2.1.4.js"></script>
+</head>
+<body>
+ 
+<div id="log">
+  <h3>Content:</h3>
+</div>
+    
+<div id="logb">
+  <h3>Content:</h3>
+</div>
+ 
+<script>
+$.getJSON('http://whateverorigin.org/get?url=' + encodeURIComponent('http://www.washington.edu/students/timeschd/SUM2015/info.html') + '&callback=?', function(data){
+    console.log("success");
+//    var json = JSON.parse(data);
+//    console.log(JSON);
+//	var $log = $( "#log" );
+//    var $logb = $( "#logb" );
+//    var str = data.contents.toLowerCase();
+//    var html = $.parseHTML( $.trim(str) );
+//    var nodeNames = [];
+// 
+//// Append the parsed HTML
+//    $log.append( html );
+//    var content = str.split(/<\/?body>/);
+//    var body = content[1];
+//    console.log(body)
+//    var pieces = body.split(/<table .*<a name=/);
+//    pieces.map(function(piece, idx) {
+//        console.log(idx);
+//        console.log(piece);
+//    });
+});
+ 
+//// Gather the parsed HTML's node names
+//$.each( html, function( i, el ) {
+//  nodeNames[ i ] = "<li>" + el.nodeName + "</li>";
+//});
+// 
+//// Insert the node names
+//$logb.append( "<h3>Node Names:</h3>" );
+//$( "<ol></ol>" )
+//  .append( nodeNames.join( "" ) )
+//  .appendTo( $logb );
+//});
+//    
+
+</script>
+ 
+</body>
+</html>
