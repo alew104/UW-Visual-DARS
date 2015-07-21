@@ -3,6 +3,7 @@ var myApp = angular.module('myApp', []);
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
 	$scope.data = data.classes;
+    $scope.offerings = offerings.classes;
     $scope.yearOne = year1.classes;
     $scope.yearTwo = year2.classes;
     $scope.yearThree = year3.classes;
@@ -16,7 +17,6 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.electives = [];
 
     $scope.markCompleted = function (_class) {
-			// we need to run the checkPreReq function here
         var prereqsCheckResult = $scope.checkPrereq(_class);
         if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
             $scope.data[_class].completed = true;
@@ -51,10 +51,6 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
             checkPassed: checkPassed,
             unfinishedPrereqs: unfinishedPrereqs
         };
-    };
-
-    $scope.suggestNextClass = function () {
-
     };
 
     $scope.checkElectives = function () {
