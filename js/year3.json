@@ -12,7 +12,7 @@ year3 = {
           "completed" : false,
           "preferredYear" : 3,
           "classType" : "NW, I&S, VLPA, ENGCOMP"
-        },    
+        },
 
         "info330" : {
           "dept" : "INFO",
@@ -68,7 +68,6 @@ year3 = {
         },
 
 
-
         "info380" : {
           "dept" : "INFO",
           "num" : "380",
@@ -81,8 +80,6 @@ year3 = {
           "preferredYear" : 3,
           "classType" : ""
         },
-
-
 
         "info450" : {
           "dept" : "INFO",

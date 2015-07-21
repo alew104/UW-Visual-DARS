@@ -7,7 +7,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.yearTwo = year2.classes;
     $scope.yearThree = year3.classes;
     $scope.yearFour = year4.classes;
-    $scope.electives = electives.classes;
+    $scope.elective = electives.classes;
 
     //$scope.netid = netid;
     $scope.credits = 0;

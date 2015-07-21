@@ -107,8 +107,6 @@ electives = {
         "classType" : ""
       },
 
-
-
         "info415" : {
           "dept" : "INFO",
           "num" : "415",
