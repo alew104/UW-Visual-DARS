@@ -16,7 +16,8 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
 
     $scope.markCompleted = function (_class) {
 			// we need to run the checkPreReq function here
-        if(!$scope.data[_class].completed) {
+        var prereqsCheckResult = $scope.checkPrereq(_class);
+        if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
             $scope.data[_class].completed = true;
             $scope.classesTaken.push(_class);
             if (!$scope.data[_class].required) {
@@ -25,19 +26,30 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
             }
             $scope.credits += $scope.data[_class].credits;
         }
+        else if($scope.data[_class].completed) {
+            console.log('This class is already completed.');
+        } else {
+            console.log('You also need prereqs ' + prereqsCheckResult.unfinishedPrereqs);
+        }
     };
 
     $scope.checkPrereq = function (_class) {
-        var result = true;
+        var unfinishedPrereqs = [];
+        var checkPassed = true;
         var prereqs = $scope.data[_class].prereqs;
-        if (!prereqs) {
+        if (prereqs != null) {
             for (var i = 0; i < prereqs.length; i++) {
-                if (result) {
-                    result = prereqs[i].completed;
+                var currClassCompleted = $scope.data[prereqs[i]].completed;
+                if (!currClassCompleted) {
+                    unfinishedPrereqs.push(prereqs[i]);
+                    checkPassed = false;
                 }
             }
         }
-        return result;
+        return {
+            checkPassed: checkPassed,
+            unfinishedPrereqs: unfinishedPrereqs
+        };
     };
 
     $scope.suggestNextClass = function () {
