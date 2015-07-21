@@ -27,9 +27,9 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
             $scope.credits += $scope.data[_class].credits;
         }
         else if($scope.data[_class].completed) {
-            console.log('This class is already completed.');
+            $scope.completedMessage = 'This class has already been marked as completed.';
         } else {
-            console.log('You also need prereqs ' + prereqsCheckResult.unfinishedPrereqs);
+            $scope.prereqsNeeded = prereqsCheckResult.unfinishedPrereqs;
         }
     };
 
