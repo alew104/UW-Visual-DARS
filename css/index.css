@@ -27,7 +27,7 @@ hr {
   position: relative;
   vertical-align: top;
   display: inline-block;
-  background-image: url(../img/125x150.svg);
+  background-image: url(../img/125x150_ex.svg);
   background-repeat: no-repeat;
 }
 
@@ -69,4 +69,16 @@ hr {
 }
 
 .yearRow{
+
 }
+
+
+
+
+-ms-transform: scale(2,3); /* IE 9 */
+    -webkit-transform: scale(2,3); /* Safari */
+    transform: scale(2,3);
+
+
+
+
