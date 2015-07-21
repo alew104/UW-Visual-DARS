@@ -4,7 +4,13 @@ body{
 }
 
 h1{
-  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-align: left;
+  padding-bottom: 5px;
+  padding-left: 20px;
 }
 
 hr {
@@ -17,6 +23,45 @@ hr {
   padding: 0px;
 }
 
+.topContent {
+  
+}
+
+.titleBar {
+  width: 100%;
+  z-index: 999;
+  background-color: #000000;
+  margin-bottom: 10px;
+}
+
+.titleBarTitle {
+  color: #00FF94;
+  font-size: 14px;
+  line-height: 0px;
+  letter-spacing: 1px;
+  padding-left: 35px;
+  padding-top: 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.titleBarDegree {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding-left: 35px;
+  text-align: left;
+}
+
+.statusBar {
+  
+}
+
+.container-fluid {
+  padding-top: 100px;
+}
+
 .classIcon{
   color: #000000;
   width: 125px;
@@ -27,7 +72,7 @@ hr {
   position: relative;
   vertical-align: top;
   display: inline-block;
-  background-image: url(../img/125x150_ex.svg);
+  background-image: url(../img/125x150.svg);
   background-repeat: no-repeat;
 }
 
@@ -71,14 +116,4 @@ hr {
 .yearRow{
 
 }
-
-
-
-
--ms-transform: scale(2,3); /* IE 9 */
-    -webkit-transform: scale(2,3); /* Safari */
-    transform: scale(2,3);
-
-
-
 

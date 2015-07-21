@@ -27,14 +27,24 @@
 
 <div ng-app = "myApp" ng-controller = "myCtrl">
 
+  <div class = "topContent">
+    <div class = "titleBar">
+      <p class = "titleBarTitle"> UW Curriculum Planner</p>
+      <p class = "titleBarDegree">Informatics: IA Concentration</p>
+    </div>
+    <div class = "statusBar">
+    </div>
+
+  </div>
+
   <div class = "container-fluid">
     <div class="row">  <!-- ng-repeat on years -->
       <div class="col-sm-12">
-        <h1>Year 1</h1>
         <div class="row">
 
           <div class="col-sm-12 col-md-8 col-md-offset-2">
 
+            <h1>Year 1</h1>
             <div class = 'classIcon' ng-repeat = "class in yearOne" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
               <p class = "classDept">
                 {{class.dept}}
@@ -50,6 +60,7 @@
                 {{class.credits}} CR
               </p>
             </div>
+
             <div>{{credits}}</div>
             <div>{{classesTaken}}</div>
 
