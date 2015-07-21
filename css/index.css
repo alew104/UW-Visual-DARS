@@ -116,3 +116,7 @@ hr {
 
 }
 
+.recommendedClass {
+  transition: color 0.25s ease;
+  color: #FF4365;
+}
