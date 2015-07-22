@@ -64,18 +64,39 @@ hr {
 .statusBar {
   position: fixed;
   top: 0px;
+  width: 100%;
   background-color: #FFFFFF;
   z-index: 998;
 }
 
+.infoProgress {
+  width: 20%;
+  display: inline-block;
+}
+
+.iaProgress {
+  width: 20%;
+  display: inline-block;
+  padding-left: 0px;
+}
+
+.prereqAlert {
+  width: 50%;
+  display: inline-block;
+  padding-left: 0px;
+}
+
+.prereqProgressClass {
+  
+}
+
+
 .infoProgressTitle {
   color: #00E585;
-  padding-left: 20px;
 }
 
 .infoProgressNum {
   color: #030C0B;
-  padding-left: 20px;
 }
 
 
