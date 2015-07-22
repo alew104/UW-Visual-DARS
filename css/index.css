@@ -1,12 +1,12 @@
 body{
   font-family: 'Karla', sans-serif;
-  background-color: #00E585;
+  background-color: #00FF94;
   -webkit-transition: background-color 0.5s ease-in-out; /* Safari */
   transition: background-color 0.5s ease-in-out;
 }
 
 body:hover {
-  background-color: #00FF94; 
+  background-color: #00E585; 
 }
 
 h1{
