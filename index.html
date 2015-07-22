@@ -28,7 +28,7 @@
         <link rel="manifest" href="img/favicon/manifest.json">
         <link rel="stylesheet" href="css/animate.css">
 
-        <title>Visual DARS</title>
+        <title>Informatics Degree Map</title>
     </head>
 
     <body>
@@ -42,7 +42,7 @@
                     <div id = "pageName" style = "display: inline-block;">
                         <p class="titleBarTitle"> UW Curriculum Planner</p>
                         <p class="titleBarDegree">Informatics: IA Concentration</p>
-                    </div> -->
+                    </div>
                     <div class="infoProgress">
                         <p class="titleBarTitle infoProgressTitle">Total Credit</p>
                         <p class="titleBarDegree infoProgressNum" >{{credits}}/180</p> <!-- placeholder -->
@@ -62,8 +62,8 @@
             </div>
 
             <div class="container-fluid">
-                <div>{{credits}}</div>
-                <div>{{classesTaken}}</div>
+                <!-- <div>{{credits}}</div>
+                <div>{{classesTaken}}</div> -->
                 <!-- Year 1 -->
                 <div class="row">
                     <div class="col-sm-12">
@@ -71,7 +71,7 @@
                             <div class="col-sm-12 col-md-8 col-md-offset-2">
                                 <h1>Year 1</h1>
                                 <!-- ng-repeat on classes in a year -->
-                                <div class='classIcon' ng-repeat="class in yearOne" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}"> 
+                                <div class='classIcon' ng-repeat="class in yearOne" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}">
                                     <p class="classDept">{{class.dept}}</p>
                                     <p class="classNum">{{class.num}}</p>
                                     <hr />
@@ -90,7 +90,7 @@
                             <div class="col-sm-12 col-md-8 col-md-offset-2">
                                 <h1>Year 2</h1>
                                 <!-- ng-repeat on classes in a year -->
-                                <div class='classIcon' ng-repeat="class in yearTwo" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}"> 
+                                <div class='classIcon' ng-repeat="class in yearTwo" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}">
                                     <p class="classDept">{{class.dept}}</p>
                                     <p class="classNum">{{class.num}}</p>
                                     <hr />
@@ -108,7 +108,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-8 col-md-offset-2">
                                 <h1>Year 3</h1>
-                                <div class='classIcon' ng-repeat="class in yearThree" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}"> 
+                                <div class='classIcon' ng-repeat="class in yearThree" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}">
                                     <p class="classDept">{{class.dept}}</p>
                                     <p class="classNum">{{class.num}}</p>
                                     <hr />
@@ -121,12 +121,12 @@
                 </div>  <!-- end Year 3 -->
 
                 <!-- Year 4 -->
-                <div class="row">  
+                <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-12 col-md-8 col-md-offset-2">
                                 <h1>Year 4</h1>
-                                <div class='classIcon' ng-repeat="class in yearFour" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}"> 
+                                <div class='classIcon' ng-repeat="class in yearFour" ng-click="changeCompletedStatus(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass pulse animated infinite' : suggestClasses(class.fullName)}">
                                     <p class="classDept">{{class.dept}}</p>
                                     <p class="classNum">{{class.num}}</p>
                                     <hr />
@@ -139,7 +139,7 @@
                 </div>  <!-- end Year 4 -->
 
                 <!-- Electives -->
-                <div class="row">  
+                <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-12 col-md-8 col-md-offset-2">
