@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', []);
 
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
-	$scope.data = data.classes;
+		$scope.data = data.classes;
     $scope.offerings = offerings.classes;
     $scope.yearOne = year1.classes;
     $scope.yearTwo = year2.classes;
@@ -27,6 +27,11 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         return $scope.data[_class].completed;
     };
 
+    $scope.changeCompletedStatus = function (_class) {
+        var index = $scope.classesTaken.indexOf(_class);
+        index === -1 ? $scope.markCompleted(_class) : $scope.removeMark(_class, index);
+    };
+
     $scope.markCompleted = function (_class) {
         var prereqsCheckResult = $scope.checkPrereq(_class);
         if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
@@ -43,6 +48,16 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         } else {
             $scope.errMessage = 'Missing prerequisites: ' + prereqsCheckResult.unfinishedPrereqs;
         }
+    };
+
+    $scope.removeMark = function (_class, index) {
+        $scope.data[_class].completed = false;
+        $scope.classesTaken.splice(index, 1);
+        if (!$scope.data[_class].required) {
+            $scope.electives.push($scope.electives.indexOf(_class));
+            $scope.electivesCredits -= $scope.data[_class].credits;
+        }
+        $scope.credits -= $scope.data[_class].credits;
     };
 
     $scope.checkPrereq = function (_class) {
