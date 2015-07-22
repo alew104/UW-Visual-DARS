@@ -27,15 +27,18 @@ const get_data = function() {
             dataType: 'json',
             async: false,
             success: function(json) {
-                var str = json.contents.replace(/[\s\n]+/gi, ' ').replace(/&nbsp;/gi, '');
+                var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
                 var content = str.split(/<br>/i);
                 content = content.map(function(item, idx) {
                     // the first 2 elements are not relevant (the <head> section and table header)
                     if (idx > 1)
                         // get rid of all html tags and characters that we don't need
                         return $.trim(item.replace(/<[\s\w="#%/.:?+&]+>/gi, '')
-                                          .replace(/(CR\/NC|>|%|\(.*\))/g, '')
-                                          .replace(/Prerequisites/g, '')
+                                          .replace(/(CR\/NC|>|%)/g, '')
+                                          .replace(/Restr /, '')
+                                          .replace(/Prerequisites (\(cancellation in effect\))?/g, '')
+                                          .replace(/ADD AND .* THIS COURSE./, '')
+                                          .replace(/"EOP .* ONLY/, '')
                                           .replace(/[\s]{2,}/g, ' '));
                 });
                 // those first two elements are undefined because they were skipped in the map()
@@ -43,6 +46,12 @@ const get_data = function() {
                 
                 // process the remainder of the elements
                 content.map(function(line) {
+                    // some departments put weird things on their time schedules so let's drop those lines
+                    if (!line.match(/^[\w]{1,6} [\d]{3} [ \w/(),&\-:\.]+ [\d]{5}/)) {
+                        console.log(line);
+                        return;
+                    }
+                    
                     // currently we have a space-delimited list to process
                     var tokens = line.split(/ /);
                     var department = tokens.shift();
@@ -54,11 +63,6 @@ const get_data = function() {
                     var number = tokens.shift();
                     var name = dept.toLowerCase() + number;
                     
-                    // build the title from several tokens
-                    var title = tokens.shift();
-                    while (!tokens[0].match(/\d/))
-                        title = title + ' ' + tokens.shift();
-                    
                     // skip sln and letter
                     tokens.splice(0, 2);
 
@@ -66,8 +70,7 @@ const get_data = function() {
                     courses.classes[name.valueOf()] = {
                         "dept" : department,
                         "num" : number,
-                        "fullName" : name,
-                        "title" : title
+                        "fullName" : name
                     };
                 });
             }
@@ -75,8 +78,10 @@ const get_data = function() {
     };
 
     $(function() {
-        get_ts('SUM', '2015', 'info');
-        get_ts('SUM', '2015', 'cse');
-        get_ts('SUM', '2015', 'engl');
+        get_ts('AUT', '2015', 'info');
+        get_ts('AUT', '2015', 'cse');
+        get_ts('AUT', '2015', 'engl');
+        get_ts('AUT', '2015', 'stat');
+        get_ts('AUT', '2015', 'qmeth');
     });
 })(jQuery);
