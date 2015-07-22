@@ -26,6 +26,11 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.checkCompleted = function(_class) {
         return $scope.data[_class].completed;
     };
+    
+    $scope.changeCompletedStatus = function (_class) {
+        var index = $scope.classesTaken.indexOf(_class);
+        index === -1 ? $scope.markCompleted(_class) : $scope.removeMark(_class, index);
+    };
 
     $scope.markCompleted = function (_class) {
         var prereqsCheckResult = $scope.checkPrereq(_class);
@@ -43,6 +48,12 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         } else {
             $scope.errMessage = 'Missing prerequisites: ' + prereqsCheckResult.unfinishedPrereqs;
         }
+    };
+
+    $scope.removeMark = function (_class, index) {
+        $scope.data[_class].completed = false;
+        $scope.classesTaken.splice(index, 1);
+        $scope.credits -= $scope.data[_class].credits;
     };
 
     $scope.checkPrereq = function (_class) {
