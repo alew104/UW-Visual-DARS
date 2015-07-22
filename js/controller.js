@@ -16,6 +16,21 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.classesTaken = [];
     $scope.electives = [];
 
+		$scope.suggestClasses = function(){
+			for (var i = 0; i < $scope.classesTaken.length; i++){
+			 		var className = $scope.classesTaken[i];
+					if (elective[className] != undefined){
+						//do something
+					}
+			}
+			for (var j = 0; j < $scope.electives.length; j++){
+				  var className = $scope.electives[j];
+					if (elective[className] != undefined){
+						//do something
+					}
+			}
+		}
+
     $scope.markCompleted = function (_class) {
         var prereqsCheckResult = $scope.checkPrereq(_class);
         if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
