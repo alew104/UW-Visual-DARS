@@ -28,9 +28,9 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
             $scope.credits += $scope.data[_class].credits;
         }
         else if($scope.data[_class].completed) {
-            $scope.completedMessage = 'This class has already been marked as completed.';
+            $scope.errMessage = 'This class has already been marked as completed.';
         } else {
-            $scope.prereqsNeeded = prereqsCheckResult.unfinishedPrereqs;
+            $scope.errMessage = ''+prereqsCheckResult.unfinishedPrereqs;
         }
     };
 
@@ -53,11 +53,4 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         };
     };
 
-    $scope.checkElectives = function () {
-        return $scope.electivesCredits + '/75 credits';
-    };
-
-	$scope.checkCredit = function () {
-		return $scope.credits + '/180 credits';
-	};
 });
