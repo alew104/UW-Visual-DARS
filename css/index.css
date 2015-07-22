@@ -165,19 +165,17 @@ hr {
   right: 10px;
 }
 
-.yearRow{
-
-}
-
-
-@keyframes border-pulsate {
-    0%   { border-color: rgba(0, 255, 255, 1); }
-    50%  { border-color: rgba(0, 255, 255, 0); }
-    100% { border-color: rgba(0, 255, 255, 1); }
-}
-
 
 .recommendedClass {
-  animation: color-pulsate 2s infinite;
   color: #FF4365;
+}
+
+@media screen and (max-width: 992px){
+  .titleBar{
+    display:none;
+  }
+  
+  .iaProgress{
+    display:none;
+  }
 }
