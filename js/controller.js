@@ -16,6 +16,17 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.classesTaken = [];
     $scope.electives = [];
 
+    $scope.suggestClasses = function(_class){
+        if($scope.data[_class].completed) {
+            return false;
+        }
+        return $scope.offerings.indexOf(_class) > -1;
+    };
+
+    $scope.checkCompleted = function(_class) {
+        return $scope.data[_class].completed;
+    };
+
     $scope.markCompleted = function (_class) {
         var prereqsCheckResult = $scope.checkPrereq(_class);
         if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
@@ -30,7 +41,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         else if($scope.data[_class].completed) {
             $scope.errMessage = 'This class has already been marked as completed.';
         } else {
-            $scope.errMessage = 'You need prerequisites: ' + prereqsCheckResult.unfinishedPrereqs;
+            $scope.errMessage = 'Missing prerequisites: ' + prereqsCheckResult.unfinishedPrereqs;
         }
     };
 
