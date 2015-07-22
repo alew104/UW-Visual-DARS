@@ -169,7 +169,15 @@ hr {
 
 }
 
+
+@keyframes border-pulsate {
+    0%   { border-color: rgba(0, 255, 255, 1); }
+    50%  { border-color: rgba(0, 255, 255, 0); }
+    100% { border-color: rgba(0, 255, 255, 1); }
+}
+
+
 .recommendedClass {
-  transition: color 0.5s ease-in-out;
+  animation: color-pulsate 2s infinite;
   color: #FF4365;
 }

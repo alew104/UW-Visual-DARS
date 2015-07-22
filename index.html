@@ -25,6 +25,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="css/animate.css">
   <title>Visual DARS</title>
 </head>
 
@@ -65,11 +66,11 @@
           <div class="col-sm-12 col-md-8 col-md-offset-2">
 
             <h1>Year 1</h1>
-            <div class='classIcon' ng-repeat="class in yearOne" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+            <div class='classIcon' ng-repeat="class in yearOne" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
               <p class="classDept">
                 {{class.dept}}
               </p>
-              <p class="classNum">
+              <p class="classNum" ng-class="{'pulse animated infinite' : suggestClasses(class.fullName)}">
                 {{class.num}}
               </p>
               <hr />
@@ -98,11 +99,11 @@
         <div class="col-sm-12 col-md-8 col-md-offset-2">
 
           <h1>Year 2</h1>
-          <div class='classIcon' ng-repeat="class in yearTwo" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+          <div class='classIcon' ng-repeat="class in yearTwo" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
             <p class="classDept">
               {{class.dept}}
             </p>
-            <p class="classNum">
+            <p class="classNum" ng-class="{'pulse animated infinite' : suggestClasses(class.fullName)}">
               {{class.num}}
             </p>
             <hr />
@@ -131,11 +132,11 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 3</h1>
-        <div class='classIcon' ng-repeat="class in yearThree" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in yearThree" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
-          <p class="classNum">
+          <p class="classNum" ng-class="{'pulse animated infinite' : suggestClasses(class.fullName)}">
             {{class.num}}
           </p>
           <hr />
@@ -164,11 +165,11 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 4</h1>
-        <div class='classIcon' ng-repeat="class in yearFour" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in yearFour" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
-          <p class="classNum">
+          <p class="classNum" ng-class="{'pulse animated infinite' : suggestClasses(class.fullName)}">
             {{class.num}}
           </p>
           <hr />
@@ -197,11 +198,11 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Electives</h1>
-        <div class='classIcon' ng-repeat="class in elective" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in elective" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
-          <p class="classNum">
+          <p class="classNum" ng-class="{'pulse animated infinite' : suggestClasses(class.fullName)}">
             {{class.num}}
           </p>
           <hr />
