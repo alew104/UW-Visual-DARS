@@ -65,23 +65,23 @@ hr {
   position: fixed;
   top: 0px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: black;
   z-index: 998;
 }
 
 .infoProgress {
-  width: 20%;
+  width: 15%;
   display: inline-block;
 }
 
 .iaProgress {
-  width: 20%;
+  width: 15%;
   display: inline-block;
   padding-left: 0px;
 }
 
 .prereqAlert {
-  width: 50%;
+  width: 30%;
   display: inline-block;
   padding-left: 0px;
 }
@@ -96,7 +96,7 @@ hr {
 }
 
 .infoProgressNum {
-  color: #030C0B;
+  color: #FFFFFF;
 }
 
 
@@ -178,5 +178,9 @@ hr {
 
   .iaProgress{
     display:none;
+  }
+
+  #pageName {
+    display:none !important;
   }
 }

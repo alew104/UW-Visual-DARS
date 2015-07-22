@@ -34,11 +34,15 @@
 <div ng-app="myApp" ng-controller="myCtrl">
 
   <div class="topContent">
-    <div class="titleBar">
+    <!-- <div class="titleBar">
       <p class="titleBarTitle"> UW Curriculum Planner</p>
       <p class="titleBarDegree">Informatics: IA Concentration</p>
-    </div>
+    </div> -->
     <div class="statusBar">
+      <div id = "pageName" style = "display: inline-block;">
+        <p class="titleBarTitle"> UW Curriculum Planner</p>
+        <p class="titleBarDegree">Informatics: IA Concentration</p>
+      </div> -->
       <div class="infoProgress">
         <p class="titleBarTitle infoProgressTitle">Credits</p>
         <p class="titleBarDegree infoProgressNum" >{{credits}}/180</p> <!-- placeholder -->
@@ -51,7 +55,7 @@
       </div>
       <div class="prereqAlert"> <!-- placeholder, hide when not needed -->
         <p class="titleBarTitle infoProgressTitle" ng-show="errMessage">Warning</p>
-        <p class="titleBarTitle infoProgressNum prereqProgressClass" ng-show="errMessage">{{errMessage}}</p> <!-- placeholder -->
+        <p class="titleBarTitle infoProgressNum prereqProgressClass " ng-show="errMessage">{{errMessage}}</p> <!-- placeholder -->
         <!-- alert: prereqs not completed -->
       </div>
     </div>
