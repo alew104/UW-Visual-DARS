@@ -32,8 +32,6 @@ hr {
 }
 
 .topContent {
-  position: fixed;
-  top: 0px;
   z-index: 9599;
   width: 100%;
 }
@@ -66,8 +64,11 @@ hr {
 }
 
 .statusBar {
-  width: 100%;
-  background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 9599;
 }
 
 .infoProgress {
@@ -104,7 +105,7 @@ hr {
 }
 
 .container-fluid {
-  padding-top: 130px;
+  padding-top: 0px;
 }
 
 .classIcon{
