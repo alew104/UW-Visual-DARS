@@ -8,7 +8,7 @@ body{
 }
 
 body:hover {
-  background-color: #00E585; 
+  background-color: #00E585;
 }
 
 h1{
@@ -32,16 +32,14 @@ hr {
 }
 
 .topContent {
-  position: fixed;
-  top: 0px;
-  z-index: 9599;
-  width: 100%;
+
 }
 
 .titleBar {
+  position: absolute;
   width: 100%;
+  z-index: 999;
   background-color: #030C0B;
-  height: 70px;
 }
 
 .titleBarTitle {
@@ -66,45 +64,47 @@ hr {
 }
 
 .statusBar {
+  position: fixed;
+  top: 0px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: black;
+  z-index: 998;
 }
 
 .infoProgress {
-  width: 25%;
+  width: 15%;
   display: inline-block;
-  vertical-align: top;
 }
 
 .iaProgress {
-  width: 25%;
+  width: 15%;
   display: inline-block;
-  vertical-align: top;
   padding-left: 0px;
 }
 
 .prereqAlert {
-  width: 45%;
+  width: 30%;
   display: inline-block;
-  vertical-align: top;
   padding-left: 0px;
 }
 
 .prereqProgressClass {
-  line-height: 15px;
-  padding-top: 0px;
+
 }
+
 
 .infoProgressTitle {
   color: #00E585;
 }
 
 .infoProgressNum {
-  color: #030C0B;
+  color: #FFFFFF;
 }
 
+
+
 .container-fluid {
-  padding-top: 130px;
+  padding-top: 100px;
 }
 
 .classIcon{
@@ -167,7 +167,22 @@ hr {
   right: 10px;
 }
 
+
 .recommendedClass {
-  transition: color 0.25s ease;
   color: #FF4365;
+}
+
+@media screen and (max-width: 992px){
+  .titleBar{
+    display:none;
+    font-size: 9px !important;
+  }
+
+  .iaProgress{
+    display:none;
+  }
+
+  #pageName {
+    display:none !important;
+  }
 }

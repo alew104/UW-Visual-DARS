@@ -6,20 +6,22 @@
         <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="js/classes.json" type = "text/javascript"></script>
-        <script src="js/year1.json" type = "text/javascript"></script>
-        <script src="js/year2.json" type = "text/javascript"></script>
-        <script src="js/year3.json" type = "text/javascript"></script>
-        <script src="js/year4.json" type = "text/javascript"></script>
-        <script src="js/classOfferings.json" type = "text/javascript"></script>
-        <script src="js/electives.json" type = "text/javascript"></script>
-        <script src="js/controller.js"></script>
-        <script src="php/current-user.php" type="text/javascript"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/angular-1.4.3.js"></script>
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap-3.3.5.js"></script>
 
-        <link href='https://fonts.googleapis.com/css?family=Archivo+Black|Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <script src="json/classes.json" type = "text/javascript"></script>
+        <script src="json/year1.json" type = "text/javascript"></script>
+        <script src="json/year2.json" type = "text/javascript"></script>
+        <script src="json/year3.json" type = "text/javascript"></script>
+        <script src="json/year4.json" type = "text/javascript"></script>
+        <script src="json/electives.json" type = "text/javascript"></script>
+
+        <script src="js/controller.js"></script>
+        <script src="php/current-user.php" language="php"></script> 
+
+
+        <link href='http://fonts.googleapis.com/css?family=Archivo+Black|Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -28,28 +30,28 @@
         <link rel="manifest" href="img/favicon/manifest.json">
         <link rel="stylesheet" href="css/animate.css">
 
-        <title>Informatics Degree Map</title>
+        <title>Visual DARS</title>
     </head>
 
     <body>
         <div ng-app="myApp" ng-controller="myCtrl">
             <div class="topContent">
-                <div class="titleBar">
-                    <p class="titleBarTitle"> UW Curriculum Planner</p>
-                    <p class="titleBarDegree">Informatics: IA Track</p>
-                </div>
                 <div class="statusBar">
+                    <div id = "pageName" style = "display: inline-block;">
+                        <p class="titleBarTitle"> UW Curriculum Planner</p>
+                        <p class="titleBarDegree">Informatics: IA Track</p>
+                    </div> -->
                     <div class="infoProgress">
-                        <p class="titleBarTitle infoProgressTitle">Total</p>
+                        <p class="titleBarTitle infoProgressTitle">Total Credit</p>
                         <p class="titleBarDegree infoProgressNum" >{{credits}}/180</p> <!-- placeholder -->
                         <!-- x/x - core credits -->
                     </div>
-                        <div class="iaProgress">
-                        <p class="titleBarTitle infoProgressTitle">Electives</p>
+                    <div class="iaProgress">
+                        <p class="titleBarTitle infoProgressTitle">Elective Credits</p>
                         <p class="titleBarDegree infoProgressNum" >{{electivesCredits}}/75</p> <!-- placeholder -->
                         <!-- x/x - IA specialization credits -->
                     </div>
-                        <div class="prereqAlert"> <!-- placeholder, hide when not needed -->
+                    <div class="prereqAlert"> <!-- placeholder, hide when not needed -->
                         <p class="titleBarTitle infoProgressTitle" ng-show="errMessage">Warning</p>
                         <p class="titleBarTitle infoProgressNum prereqProgressClass" ng-show="errMessage">{{errMessage}}</p> <!-- placeholder -->
                         <!-- alert: prereqs not completed -->
@@ -58,8 +60,8 @@
             </div>
 
             <div class="container-fluid">
-                <!-- <div>{{credits}}</div>
-                <div>{{classesTaken}}</div> -->
+                <div>{{credits}}</div>
+                <div>{{classesTaken}}</div>
                 <!-- Year 1 -->
                 <div class="row">
                     <div class="col-sm-12">

@@ -1,0 +1,97 @@
+year3 = {
+    "classes": {
+
+        "cse373" : {
+          "dept" : "CSE",
+          "num" : "373",
+          "fullName" : "cse373",
+          "title" : "Data Structures & Algorithms",
+          "credits": 3,
+          "required" : true,
+          "prereqs" : ["cse143"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW, I&S, VLPA, ENGCOMP"
+        },
+
+        "info330" : {
+          "dept" : "INFO",
+          "num" : "330",
+          "fullName" : "info330",
+          "title" : "UX & Information Architecture",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["info360"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : null
+        },
+
+        "info340" : {
+          "dept" : "INFO",
+          "num" : "340",
+          "fullName" : "info340",
+          "title" : "Relational Database Management Systems",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+        "info343" : {
+          "dept" : "INFO",
+          "num" : "343",
+          "fullName" : "info343",
+          "title" : "Client-Side Web Development",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["cse142"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "NW"
+        },
+
+
+        "info360" : {
+          "dept" : "INFO",
+          "num" : "360",
+          "fullName" : "info360",
+          "title" : "Design Thinking",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        },
+
+
+        "info380" : {
+          "dept" : "INFO",
+          "num" : "380",
+          "fullName" : "info380",
+          "title" : "Information Systems Analysis and Design",
+          "credits" : 4,
+          "required" : true,
+          "prereqs" : null,
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : ""
+        },
+
+        "info450" : {
+          "dept" : "INFO",
+          "num" : "450",
+          "fullName" : "info450",
+          "title" : "Information Ethics and Policy",
+          "credits" : 5,
+          "required" : true,
+          "prereqs" : ["info360"],
+          "completed" : false,
+          "preferredYear" : 3,
+          "classType" : "I&S"
+        }
+    }
+}
