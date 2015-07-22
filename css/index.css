@@ -6,7 +6,7 @@ body{
 }
 
 body:hover {
-  background-color: #00E585; 
+  background-color: #00E585;
 }
 
 h1{
@@ -30,7 +30,7 @@ hr {
 }
 
 .topContent {
-  
+
 }
 
 .titleBar {
@@ -87,7 +87,7 @@ hr {
 }
 
 .prereqProgressClass {
-  
+
 }
 
 
@@ -170,6 +170,6 @@ hr {
 }
 
 .recommendedClass {
-  transition: color 0.25s ease;
+  transition: color 0.5s ease-in-out;
   color: #FF4365;
 }
