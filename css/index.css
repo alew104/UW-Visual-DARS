@@ -11,7 +11,7 @@ body:hover {
   background-color: #00E585; 
 }
 
-h1{
+h1 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -64,11 +64,8 @@ hr {
 }
 
 .statusBar {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    background-color: #FFFFFF;
-    z-index: 9599;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 
 .infoProgress {
