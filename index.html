@@ -23,33 +23,33 @@
 
 <body>
 
-<div ng-app = "myApp" ng-controller = "myCtrl">
+<div ng-app="myApp" ng-controller="myCtrl">
 
-  <div class = "topContent">
-    <div class = "titleBar">
-      <p class = "titleBarTitle"> UW Curriculum Planner</p>
-      <p class = "titleBarDegree">Informatics: IA Concentration</p>
+  <div class="topContent">
+    <div class="titleBar">
+      <p class="titleBarTitle"> UW Curriculum Planner</p>
+      <p class="titleBarDegree">Informatics: IA Concentration</p>
     </div>
-    <div class = "statusBar">
-      <div class = "infoProgress">
-        <p class = "titleBarTitle infoProgressTitle">Informatics</p>
-        <p class = "titleBarDegree infoProgressNum">0/110 </p> <!-- placeholder -->
+    <div class="statusBar">
+      <div class="infoProgress">
+        <p class="titleBarTitle infoProgressTitle">Informatics</p>
+        <p class="titleBarDegree infoProgressNum">0/110 </p> <!-- placeholder -->
         <!-- x/x - core credits -->
       </div>
-      <div class = "iaProgress">
-        <p class = "titleBarTitle infoProgressTitle">IA Track</p>
-        <p class = "titleBarDegree infoProgressNum">0/30 </p> <!-- placeholder -->
+      <div class="iaProgress">
+        <p class="titleBarTitle infoProgressTitle">IA Track</p>
+        <p class="titleBarDegree infoProgressNum">0/30 </p> <!-- placeholder -->
         <!-- x/x - IA specialization credits -->
       </div>
-      <div class = "prereqAlert"> <!-- placeholder, hide when not needed -->
-        <p class = "titleBarTitle infoProgressTitle">Prereqs needed</p>
-        <p class = "titleBarTitle infoProgressNum prereqProgressClass">CSE 142, CSE 143 </p> <!-- placeholder -->
+      <div class="prereqAlert"> <!-- placeholder, hide when not needed -->
+        <p class="titleBarTitle infoProgressTitle">Prereqs needed</p>
+        <p class="titleBarTitle infoProgressNum prereqProgressClass">CSE 142, CSE 143 </p> <!-- placeholder -->
         <!-- alert: prereqs not completed -->
       </div>
     </div>
   </div>
 
-  <div class = "container-fluid">
+  <div class="container-fluid">
 
     <div class="row">  <!-- ng-repeat on years -->
       <div class="col-sm-12">
@@ -58,18 +58,18 @@
           <div class="col-sm-12 col-md-8 col-md-offset-2">
 
             <h1>Year 1</h1>
-            <div class = 'classIcon' ng-repeat = "class in yearOne" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
-              <p class = "classDept">
+            <div class='classIcon' ng-repeat="class in yearOne" ng-click="markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+              <p class="classDept">
                 {{class.dept}}
               </p>
-              <p class = "classNum">
+              <p class="classNum">
                 {{class.num}}
               </p>
               <hr />
-              <p class = "classTitle">
+              <p class="classTitle">
                 {{class.title}}
               </p>
-              <p class = "classCredits">
+              <p class="classCredits">
                 {{class.credits}} CR
               </p>
             </div>
@@ -91,18 +91,18 @@
         <div class="col-sm-12 col-md-8 col-md-offset-2">
 
           <h1>Year 2</h1>
-          <div class = 'classIcon' ng-repeat = "class in yearTwo" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
-            <p class = "classDept">
+          <div class='classIcon' ng-repeat = "class in yearTwo" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+            <p class="classDept">
               {{class.dept}}
             </p>
-            <p class = "classNum">
+            <p class="classNum">
               {{class.num}}
             </p>
             <hr />
-            <p class = "classTitle">
+            <p class="classTitle">
               {{class.title}}
             </p>
-            <p class = "classCredits">
+            <p class="classCredits">
               {{class.credits}} CR
             </p>
           </div>
@@ -124,18 +124,18 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 3</h1>
-        <div class = 'classIcon' ng-repeat = "class in yearThree" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
-          <p class = "classDept">
+        <div class='classIcon' ng-repeat = "class in yearThree" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+          <p class="classDept">
             {{class.dept}}
           </p>
-          <p class = "classNum">
+          <p class="classNum">
             {{class.num}}
           </p>
           <hr />
-          <p class = "classTitle">
+          <p class="classTitle">
             {{class.title}}
           </p>
-          <p class = "classCredits">
+          <p class="classCredits">
             {{class.credits}} CR
           </p>
         </div>
@@ -157,18 +157,18 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 4</h1>
-        <div class = 'classIcon' ng-repeat = "class in yearFour" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
-          <p class = "classDept">
+        <div class='classIcon' ng-repeat = "class in yearFour" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+          <p class="classDept">
             {{class.dept}}
           </p>
-          <p class = "classNum">
+          <p class="classNum">
             {{class.num}}
           </p>
           <hr />
-          <p class = "classTitle">
+          <p class="classTitle">
             {{class.title}}
           </p>
-          <p class = "classCredits">
+          <p class="classCredits">
             {{class.credits}} CR
           </p>
         </div>
@@ -190,18 +190,18 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Electives</h1>
-        <div class = 'classIcon' ng-repeat = "class in elective" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
-          <p class = "classDept">
+        <div class='classIcon' ng-repeat = "class in elective" ng-click = "markCompleted(class.fullName)"> <!-- ng-repeat on classes in a year -->
+          <p class="classDept">
             {{class.dept}}
           </p>
-          <p class = "classNum">
+          <p class="classNum">
             {{class.num}}
           </p>
           <hr />
-          <p class = "classTitle">
+          <p class="classTitle">
             {{class.title}}
           </p>
-          <p class = "classCredits">
+          <p class="classCredits">
             {{class.credits}} CR
           </p>
         </div>
