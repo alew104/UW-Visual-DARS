@@ -53,6 +53,10 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.removeMark = function (_class, index) {
         $scope.data[_class].completed = false;
         $scope.classesTaken.splice(index, 1);
+        if (!$scope.data[_class].required) {
+            $scope.electives.push($scope.electives.indexOf(_class));
+            $scope.electivesCredits -= $scope.data[_class].credits;
+        }
         $scope.credits -= $scope.data[_class].credits;
     };
 
