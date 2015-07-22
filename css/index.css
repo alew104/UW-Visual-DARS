@@ -173,8 +173,9 @@ hr {
 @media screen and (max-width: 992px){
   .titleBar{
     display:none;
+    font-size: 9px !important;
   }
-  
+
   .iaProgress{
     display:none;
   }
