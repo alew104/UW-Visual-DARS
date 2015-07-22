@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', []);
 
 var myCtrl = myApp.controller('myCtrl', function($scope) {
 
-	$scope.data = data.classes;
+		$scope.data = data.classes;
     $scope.offerings = offerings.classes;
     $scope.yearOne = year1.classes;
     $scope.yearTwo = year2.classes;
@@ -26,7 +26,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
     $scope.checkCompleted = function(_class) {
         return $scope.data[_class].completed;
     };
-    
+
     $scope.changeCompletedStatus = function (_class) {
         var index = $scope.classesTaken.indexOf(_class);
         index === -1 ? $scope.markCompleted(_class) : $scope.removeMark(_class, index);
