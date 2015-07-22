@@ -1,17 +1,22 @@
 (function($) {
+    // adds the scroll event listener to the window on load
     $(function() {
-        window.addEventListener("scroll", scroll);
+        $(window).scroll(scroll);
     });
     
+    // when the page has scrolled the height of the titleBar, the statusBar will
+    // remain fixed and the content will scroll beneath it
     function scroll() {
         var bar = $(".statusBar");
-        // 85px is the true height of #top plus the 16px margin above #top
-        if(window.pageYOffset >= 70) {
-            $(".statusBar").addClass("scroll");
-            $(".container-fluid").css({ "padding-top" : "70px" });
+        var container = $(".container-fluid");
+        var height = $(".titleBar").height();
+        
+        if(window.pageYOffset >= height) {
+            bar.addClass("scroll");
+            container.css({ "padding-top" : height + "px" });
         } else {
-            $(".statusBar").removeClass("scroll");
-            $(".container-fluid").css({ "padding-top" : "00px" });
+            bar.removeClass("scroll");
+            container.css({ "padding-top" : "0px" });
         }
     }
 })(jQuery);
