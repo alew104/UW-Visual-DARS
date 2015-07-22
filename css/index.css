@@ -75,6 +75,15 @@ hr {
   background-repeat: no-repeat;
 }
 
+.classIcon:hover {
+  background-image: url(../img/125x150_greenWhiteBorder.svg);
+}
+
+.classIconCompleted {
+  background-image: url(../img/125x150_completed.svg);
+  color: #FFFFFF;
+}
+
 .classDept{
   font-size: 10px;
   line-height: 8px;
