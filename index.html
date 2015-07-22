@@ -186,7 +186,7 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Electives</h1>
-        <div class='classIcon' ng-repeat="class in elective" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in elective" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : checkCompleted(class.fullName), 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
