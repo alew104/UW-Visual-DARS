@@ -7,8 +7,6 @@
 // the only identifies in the global namespace
 const courses = {};
 const get_data = function() {
-    var data = $('#data');
-    data.text(JSON.stringify(courses));
     return courses;
 };
 
