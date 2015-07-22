@@ -23,6 +23,10 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         return $scope.offerings.indexOf(_class) > -1;
     };
 
+    $scope.checkCompleted = function(_class) {
+        return $scope.data[_class].completed;
+    };
+
     $scope.markCompleted = function (_class) {
         var prereqsCheckResult = $scope.checkPrereq(_class);
         if(!$scope.data[_class].completed && prereqsCheckResult.checkPassed) {
