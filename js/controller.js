@@ -30,7 +30,7 @@ var myCtrl = myApp.controller('myCtrl', function($scope) {
         else if($scope.data[_class].completed) {
             $scope.errMessage = 'This class has already been marked as completed.';
         } else {
-            $scope.errMessage = ''+prereqsCheckResult.unfinishedPrereqs;
+            $scope.errMessage = 'You need prerequisites: ' + prereqsCheckResult.unfinishedPrereqs;
         }
     };
 
