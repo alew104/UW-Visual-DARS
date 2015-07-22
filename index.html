@@ -65,7 +65,7 @@
           <div class="col-sm-12 col-md-8 col-md-offset-2">
 
             <h1>Year 1</h1>
-            <div class='classIcon' ng-repeat="class in yearOne" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+            <div class='classIcon' ng-repeat="class in yearOne" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
               <p class="classDept">
                 {{class.dept}}
               </p>
@@ -98,7 +98,7 @@
         <div class="col-sm-12 col-md-8 col-md-offset-2">
 
           <h1>Year 2</h1>
-          <div class='classIcon' ng-repeat="class in yearTwo" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+          <div class='classIcon' ng-repeat="class in yearTwo" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
             <p class="classDept">
               {{class.dept}}
             </p>
@@ -131,7 +131,7 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 3</h1>
-        <div class='classIcon' ng-repeat="class in yearThree" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in yearThree" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
@@ -164,7 +164,7 @@
       <div class="col-sm-12 col-md-8 col-md-offset-2">
 
         <h1>Year 4</h1>
-        <div class='classIcon' ng-repeat="class in yearFour" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'suggestPulse' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
+        <div class='classIcon' ng-repeat="class in yearFour" ng-click="markCompleted(class.fullName)" ng-class="{'classIconCompleted' : class.completed == true, 'recommendedClass' : suggestClasses(class.fullName)}"> <!-- ng-repeat on classes in a year -->
           <p class="classDept">
             {{class.dept}}
           </p>
