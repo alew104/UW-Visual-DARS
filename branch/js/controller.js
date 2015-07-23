@@ -23,18 +23,18 @@
                 
                 // encode to ensure safety when accepting foreign strings
                 var path = encodeURIComponent(qtr.toUpperCase() + year + '/' + d.toLowerCase() + '.html');
-                var url = url_xsop + url_ts + path + '&callback=?';
+                var url = url_ts + path;
                 
                 // the $http.get() method returns an error due to the Same-Origin Policy
                 // so using jQuery inside the angular code to bypass that
                 $.ajax({
                     url: url, 
-                    dataType: 'jsonp',
+                    dataType: 'json',
                     crossDomain: true
 //                    async: true,
                 }).done(function(json) {
                     const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
-                    var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
+                    var str = json.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
                     var match = '';
                     do {
                         match = regex.exec(str);
