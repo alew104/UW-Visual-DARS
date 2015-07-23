@@ -9,10 +9,6 @@
         self.courses.offered = [];
 
         self.get_ts = function() {
-            // using whateverorigin.org allows bypassing the Same-Origin Policy
-            const url_xsop = 'https://whateverorigin.org/get?url=';   
-            const url_ts = 'https://www.washington.edu/students/timeschd/'; 
-            
             // hard-coded due to lack of time but would rather write a function to 
             // determine the year and next quarter based on the date or what's the
             // most recently posted on http://www.washington.edu/students/timeschd/
@@ -21,6 +17,10 @@
             const dept = ['info', 'cse', 'engl', 'stat', 'qmeth'];
             
             dept.map(function(d) {
+                // using whateverorigin.org allows bypassing the Same-Origin Policy
+                const url_xsop = 'http://whateverorigin.org/get?url=';   
+                const url_ts = 'https://www.washington.edu/students/timeschd/'; 
+                
                 // encode to ensure safety when accepting foreign strings
                 var path = encodeURIComponent(qtr.toUpperCase() + year + '/' + d.toLowerCase() + '.html');
                 var url = url_xsop + url_ts + path + '&callback=?';
@@ -28,20 +28,20 @@
                 // the $http.get() method returns an error due to the Same-Origin Policy
                 // so using jQuery inside the angular code to bypass that
                 $.ajax({
-                    url: url_xsop + url_ts + path + '&callback=?', 
-                    dataType: 'json',
-                    async: true,
-                    success: function(json) {
-                        const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
-                        var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
-                        var match = '';
-                        do {
-                            match = regex.exec(str);
-                            if (match)
-                                self.courses.offered.push(match[0].substr(8));
-                        } while (match != null); 
-                        $rootScope.$broadcast("got_ts");
-                    }
+                    url: url, 
+                    dataType: 'jsonp',
+                    crossDomain: true
+//                    async: true,
+                }).done(function(json) {
+                    const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
+                    var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
+                    var match = '';
+                    do {
+                        match = regex.exec(str);
+                        if (match)
+                            self.courses.offered.push(match[0].substr(8));
+                    } while (match != null); 
+                    $rootScope.$broadcast("got_ts");
                 });
             });
         };
