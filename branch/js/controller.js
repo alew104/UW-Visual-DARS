@@ -18,23 +18,24 @@
             
             dept.map(function(d) {
                 // using whateverorigin.org allows bypassing the Same-Origin Policy
-                const url_xsop = 'http://whateverorigin.org/get?url=';   
+//                const url_xsop = 'http://whateverorigin.org/get?url=';   
+                const url_xsop = 'http://anyorigin.com/dev/get?url=';
                 const url_ts = 'https://www.washington.edu/students/timeschd/'; 
                 
                 // encode to ensure safety when accepting foreign strings
                 var path = encodeURIComponent(qtr.toUpperCase() + year + '/' + d.toLowerCase() + '.html');
-                var url = url_ts + path;
+                var url = url_xsop + url_ts + path + '&callback=?';
                 
-                // the $http.get() method returns an error due to the Same-Origin Policy
-                // so using jQuery inside the angular code to bypass that
+                // the $http.get() method returns an error due to the Same-Origin Policy even on 
+                // an http connection so using jQuery inside the angular code to bypass that
                 $.ajax({
                     url: url, 
-                    dataType: 'json',
+                    dataType: 'jsonp',
+                    async: false,
                     crossDomain: true
-//                    async: true,
                 }).done(function(json) {
                     const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
-                    var str = json.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
+                    var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
                     var match = '';
                     do {
                         match = regex.exec(str);
@@ -63,6 +64,7 @@
         $scope.classesTaken = [];
         $scope.electives = [];
         
+        // this loads the 
         $scope.$on('got_ts', function () {
             $scope.offerings = myServ.courses.offered;
             $("div.classIcon:last").click();
