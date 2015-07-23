@@ -1,22 +1,21 @@
-
-
 // jQuery-style module pattern
 (function($) {
     var myApp = angular.module('myApp', []);
     
-    myApp.service('myServ', function ($http) {
+    myApp.service('myServ', function ($rootScope) {
         var self = this;
         
         self.courses = {};
         self.courses.offered = [];
-        
 
         self.get_ts = function() {
             // using whateverorigin.org allows bypassing the Same-Origin Policy
             const url_xsop = 'http://whateverorigin.org/get?url=';   
             const url_ts = 'http://www.washington.edu/students/timeschd/'; 
             
-            // hard-coded but may have time to write a function to determine the year and next quarter
+            // hard-coded due to lack of time but would rather write a function to 
+            // determine the year and next quarter based on the date or what's the
+            // most recently posted on http://www.washington.edu/students/timeschd/
             const qtr = 'AUT';
             const year = '2015';
             const dept = ['info', 'cse', 'engl', 'stat', 'qmeth'];
@@ -24,26 +23,14 @@
             dept.map(function(d) {
                 // encode to ensure safety when accepting foreign strings
                 var path = encodeURIComponent(qtr.toUpperCase() + year + '/' + d.toLowerCase() + '.html');
-                var url = url_xsop + url_ts + path +  + '&callback=?';
-
-//                $http.get(url)
-//                        .success(function(json) {
-//                            var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
-//                            var match = '';
-//                            const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
-//                            do {
-//                                match = regex.exec(str);
-//                                if (match)
-//                                    courses.offered.push(match[0].substr(8));
-//                            } while (match != null); 
-//                        })
-//                        .error(function() {
-//                            console.log("error");
-//                        });
+                var url = url_xsop + url_ts + path + '&callback=?';
+                
+                // the $http.get() method returns an error due to the Same-Origin Policy
+                // so using jQuery inside the angular code to bypass that
                 $.ajax({
                     url: url_xsop + url_ts + path + '&callback=?', 
                     dataType: 'json',
-                    async: false,
+                    async: true,
                     success: function(json) {
                         const regex = /<A NAME=(info|cse|stat|engl|qmeth)\d{3}/ig;
                         var str = json.contents.replace(/[\s]+/gi, ' ').replace(/&nbsp;/gi, '');
@@ -51,8 +38,9 @@
                         do {
                             match = regex.exec(str);
                             if (match)
-                                courses.classes.push(match[0].substr(8));
+                                self.courses.offered.push(match[0].substr(8));
                         } while (match != null); 
+                        $rootScope.$broadcast("got_ts");
                     }
                 });
             });
@@ -61,9 +49,7 @@
         self.get_ts();
     });
 
-    var myCtrl = function($scope, myServ) {
-        $scope.offerings = myServ.courses.offered;
-
+    var myCtrl = myApp.controller('myCtrl', function($scope, myServ) {
         $scope.data = data.classes;
         $scope.yearOne = year1.classes;
         $scope.yearTwo = year2.classes;
@@ -76,12 +62,19 @@
         $scope.electivesCredits = 0;
         $scope.classesTaken = [];
         $scope.electives = [];
+        
+        $scope.$on('got_ts', function () {
+            $scope.offerings = myServ.courses.offered;
+            $("div.classIcon:last").click();
+            $("div.classIcon:last").click();
+        });
 
         $scope.suggestClasses = function(_class) {
             if($scope.data[_class].completed) {
                 return false;
             }
-            return $scope.offerings.indexOf(_class) > -1;
+            if ($scope.offerings)
+                return $scope.offerings.indexOf(_class) > -1;
         };
 
         $scope.checkCompleted = function(_class) {
@@ -140,8 +133,6 @@
             };
         };
         
-    };
-    
-    myApp.controller('myCtrl', myCtrl);
+    });
 
 })(jQuery);
