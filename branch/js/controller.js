@@ -10,8 +10,8 @@
 
         self.get_ts = function() {
             // using whateverorigin.org allows bypassing the Same-Origin Policy
-            const url_xsop = 'http://whateverorigin.org/get?url=';   
-            const url_ts = 'http://www.washington.edu/students/timeschd/'; 
+            const url_xsop = 'https://whateverorigin.org/get?url=';   
+            const url_ts = 'https://www.washington.edu/students/timeschd/'; 
             
             // hard-coded due to lack of time but would rather write a function to 
             // determine the year and next quarter based on the date or what's the
@@ -131,8 +131,6 @@
                 checkPassed: checkPassed,
                 unfinishedPrereqs: unfinishedPrereqs
             };
-        };
-        
+        }; 
     });
-
 })(jQuery);
